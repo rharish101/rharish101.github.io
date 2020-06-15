@@ -6,6 +6,14 @@ html
 
 body
 {
+  /* Light-mode colors */
+  --text-color: #555;
+  --bg-color: #fff;
+  --heading-color: #333;
+  --link-color: #2962ff;
+  --shadow-color: #555;
+  --button-color: #fff;
+
   max-width: 100%;
   padding: 2% 5%;
   margin: 0;
@@ -18,20 +26,15 @@ body
   align-items: center;
   justify-content: space-evenly;
 
+  color: var(--text-color);
+  background-color: var(--bg-color);
   transition: background-color 0.1s;
-
-  color: #555;
-  background-color: #fff;
-  --heading-color: #333;
-  --link-color: #2962ff;
-  --shadow-color: #555;
-  --button-color: #fff;
 }
 
 .dark-mode
 {
-  color: #aaa;
-  background-color: #333;
+  --text-color: #aaa;
+  --bg-color: #333;
   --heading-color: #ddd;
   --link-color: #82b1ff;
   --shadow-color: #000;
