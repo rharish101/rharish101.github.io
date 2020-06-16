@@ -65,13 +65,11 @@ a:hover { text-decoration: underline; }
   right: 1em;
 }
 
-.profile-pic
+#profile-pic
 {
   width: 120px;
   height: 120px;
   margin: 20px 0;
-
-  background: url('https://avatars.githubusercontent.com/rharish101') center/cover;
   display: block;
 
   border: 5px solid var(--button-color);
@@ -79,7 +77,7 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 10px var(--shadow-color);
 }
 
-.main-title
+#main-title
 {
   width: 100%;
   color: var(--heading-color);
@@ -87,7 +85,7 @@ a:hover { text-decoration: underline; }
   font-size: 2em;
 }
 
-.sub-title
+#sub-title
 {
   width: 100%;
   text-align: center;
@@ -115,15 +113,6 @@ a:hover { text-decoration: underline; }
 }
 .section > * { margin: 0.2em 0; }
 
-.section-heading
-{
-  color: var(--heading-color);
-  width: 100%;
-  font-size: 1.3em;
-  text-align: left;
-  border-bottom: 0.1em solid;
-}
-
 .section-break
 {
   width: 50%;
@@ -134,15 +123,6 @@ a:hover { text-decoration: underline; }
   background-color: var(--text-color);
   border-width: 0;
 }
-
-/* small-list should be used for lists with single-line contents
- * big-list should be used for multi-line content */
-.small-list, .big-list { text-align: justify; }
-.small-list > li { margin: 0.5em 0; }
-.big-list > li { margin: 1em 0; }
-
-/* This is an alternative to <br> tags */
-.break { margin: 1em; }
 
 .button
 {
@@ -168,18 +148,18 @@ a:hover { text-decoration: underline; }
   left: 0;
 }
 
-.social-bar
+#social-bar
 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-.social-bar ion-icon
+#social-bar ion-icon
 {
   --size: 30px;
   width: var(--size);
   height: var(--size);
   margin: 10px;
 }
-.social-bar ion-icon:hover { filter: brightness(150%); }
+#social-bar ion-icon:hover { filter: brightness(150%); }
