@@ -1,3 +1,9 @@
+/*
+==================================================
+General
+==================================================
+*/
+
 html
 {
   width: 100%;
@@ -6,14 +12,6 @@ html
 
 body
 {
-  /* Light-mode colors */
-  --text-color: #555;
-  --bg-color: #fff;
-  --heading-color: #333;
-  --link-color: #2962ff;
-  --shadow-color: #555;
-  --button-color: #fff;
-
   max-width: 100%;
   padding: 0 5%;
   margin: 0;
@@ -30,26 +28,6 @@ body
   transition: background-color 0.1s;
 }
 
-.dark-mode
-{
-  --text-color: #aaa;
-  --bg-color: #333;
-  --heading-color: #ddd;
-  --link-color: #82b1ff;
-  --shadow-color: #000;
-  --button-color: #555;
-}
-
-p
-{
-  width: 100%;  /* helps in left-aligning text when inside a .section */
-  max-width: 800px;
-  margin: 0.5em auto 0;
-
-  text-align: justify;
-  text-indent: 1.5em;
-}
-
 a
 {
   text-decoration: none;
@@ -57,42 +35,13 @@ a
 }
 a:hover { text-decoration: underline; }
 
-#profile-pic
+.button
 {
-  width: 120px;
-  height: 120px;
-  margin: 20px;
+  background-color: var(--button-color);
+  box-shadow: 0 0 5px var(--shadow-color);
   display: block;
-
-  border: 5px solid var(--button-color);
-  border-radius: 65px;
-  box-shadow: 0 0 10px var(--shadow-color);
 }
-
-#main-title
-{
-  width: 100%;
-  margin: 0 auto 0.1em;
-  color: var(--heading-color);
-  text-align: center;
-  font-size: 2em;
-}
-
-#sub-title
-{
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-.title
-{
-  width: 100%;
-  margin: 0 auto 0.2em;
-  color: var(--heading-color);
-  text-align: center;
-  font-size: 1.5em;
-}
+.button:hover { filter: brightness(150%); }
 
 .section
 {
@@ -115,13 +64,31 @@ a:hover { text-decoration: underline; }
   border-width: 0;
 }
 
-.button
+/*
+==================================================
+Color Schemes
+==================================================
+*/
+
+body /* Default colors: Light-mode */
 {
-  background-color: var(--button-color);
-  box-shadow: 0 0 5px var(--shadow-color);
-  display: block;
+  --text-color: #555;
+  --bg-color: #fff;
+  --heading-color: #333;
+  --link-color: #2962ff;
+  --shadow-color: #555;
+  --button-color: #fff;
 }
-.button:hover { filter: brightness(150%); }
+
+.dark-mode
+{
+  --text-color: #aaa;
+  --bg-color: #333;
+  --heading-color: #ddd;
+  --link-color: #82b1ff;
+  --shadow-color: #000;
+  --button-color: #555;
+}
 
 #toggle-mode
 {
@@ -139,6 +106,40 @@ a:hover { text-decoration: underline; }
   left: 0;
 }
 
+/*
+==================================================
+Top Info
+==================================================
+*/
+
+#profile-pic
+{
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  display: block;
+
+  border: 5px solid var(--button-color);
+  border-radius: 65px;
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+#name
+{
+  width: 100%;
+  margin: 0 auto 0.1em;
+  color: var(--heading-color);
+  text-align: center;
+  font-size: 2em;
+}
+
+#short-desc
+{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
 #social-bar
 {
   display: flex;
@@ -154,3 +155,28 @@ a:hover { text-decoration: underline; }
   margin: 10px;
 }
 #social-bar ion-icon:hover { filter: brightness(150%); }
+
+/*
+==================================================
+Content
+==================================================
+*/
+
+.section-title
+{
+  width: 100%;
+  margin: 0 auto 0.2em;
+  color: var(--heading-color);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+p
+{
+  width: 100%;  /* helps in left-aligning text when inside a .section */
+  max-width: 800px;
+  margin: 0.5em auto 0;
+
+  text-align: justify;
+  text-indent: 1.5em;
+}
