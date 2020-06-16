@@ -15,7 +15,7 @@ body
   --button-color: #fff;
 
   max-width: 100%;
-  padding: 2% 5%;
+  padding: 0 5%;
   margin: 0;
 
   font-family: Helvetica, Arial, sans-serif;
@@ -24,7 +24,6 @@ body
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -45,7 +44,7 @@ p
 {
   width: 100%;  /* helps in left-aligning text when inside a .section */
   max-width: 800px;
-  padding: 1% 0;
+  margin: 0.5em auto 0;
 
   text-align: justify;
   text-indent: 1.5em;
@@ -62,7 +61,7 @@ a:hover { text-decoration: underline; }
 {
   width: 120px;
   height: 120px;
-  margin: 20px 0;
+  margin: 20px;
   display: block;
 
   border: 5px solid var(--button-color);
@@ -73,6 +72,7 @@ a:hover { text-decoration: underline; }
 #main-title
 {
   width: 100%;
+  margin: 0 auto 0.1em;
   color: var(--heading-color);
   text-align: center;
   font-size: 2em;
@@ -88,10 +88,10 @@ a:hover { text-decoration: underline; }
 .title
 {
   width: 100%;
+  margin: 0 auto 0.2em;
   color: var(--heading-color);
   text-align: center;
   font-size: 1.5em;
-  padding: 0.2em;
 }
 
 .section
@@ -101,10 +101,8 @@ a:hover { text-decoration: underline; }
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
-.section > * { margin: 0.2em 0; }
 
 .section-break
 {
