@@ -73,7 +73,7 @@ Color Schemes
 body /* Default colors: Light-mode */
 {
   --text-color: #555;
-  --bg-color: #fff;
+  --bg-color: #eee;
   --heading-color: #333;
   --link-color: #2962ff;
   --shadow-color: #555;
