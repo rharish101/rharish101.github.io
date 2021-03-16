@@ -1,3 +1,7 @@
+// Icon for light/dark mode switching
+const LIGHT_MODE_ICON = "sunny"; // shown in dark mode
+const DARK_MODE_ICON = "moon"; // shown in light mode
+
 function getPreferredMode()
 {
   if (
@@ -9,7 +13,7 @@ function getPreferredMode()
     return "light";
 }
 
-function setMode()
+function initMode()
 {
   var mode = window.localStorage.getItem("mode");
   if (!mode)
@@ -20,14 +24,13 @@ function setMode()
 
   if (mode != "dark")
   {
-    document.getElementById("toggle-mode").name = "moon";
+    document.getElementById("toggle-mode").name = DARK_MODE_ICON;
     return;
   }
 
   // Disable transitions temporarily, as they lead to a white flash
   document.body.style.transitionDuration = "0s";
-  document.body.classList.toggle("dark-mode");
-  document.getElementById("toggle-mode").name = "sunny";
+  toggleMode()
   setTimeout(
     function () {
       document.body.style.transitionDuration = "0.1s";
@@ -41,14 +44,14 @@ function toggleMode()
   if (document.body.classList.contains("dark-mode"))
   {
     window.localStorage.setItem("mode", "dark");
-    document.getElementById("toggle-mode").name = "sunny";
+    document.getElementById("toggle-mode").name = LIGHT_MODE_ICON;
   }
   else
   {
     window.localStorage.setItem("mode", "light");
-    document.getElementById("toggle-mode").name = "moon";
+    document.getElementById("toggle-mode").name = DARK_MODE_ICON;
   }
 }
 
-setMode();
+initMode();
 document.getElementById("toggle-mode").onclick = toggleMode;
