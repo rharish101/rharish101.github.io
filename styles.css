@@ -135,16 +135,21 @@ Top Info
   width: 100%;
   /* 0 margin at top to avoid whitespace b/w this and section start */
   margin: 0 auto 0.1rem;
+  padding: 0;
   color: var(--heading-color);
   text-align: center;
   font-size: 2rem;
+  font-weight: normal;
 }
 
 #short-desc
 {
   width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
   font-size: 1.2rem;
+  font-weight: normal;
 }
 
 #social-bar
@@ -174,9 +179,11 @@ Content
   width: 100%;
   /* 0 margin at top to avoid whitespace b/w this and section start */
   margin: 0 auto 0.2rem;
+  padding: 0;
   color: var(--heading-color);
   text-align: center;
   font-size: 1.5rem;
+  font-weight: normal;
 }
 
 p
