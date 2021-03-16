@@ -2,6 +2,10 @@
 const LIGHT_MODE_ICON = "sunny"; // shown in dark mode
 const DARK_MODE_ICON = "moon"; // shown in light mode
 
+// Text shown on hovering
+const LIGHT_MODE_TEXT = "Switch to light mode"; // shown in dark mode
+const DARK_MODE_TEXT = "Switch to dark mode"; // shown in light mode
+
 function getPreferredMode()
 {
   if (
@@ -41,15 +45,19 @@ function initMode()
 function toggleMode()
 {
   document.body.classList.toggle("dark-mode");
+  var modeButton = document.getElementById("toggle-mode");
+
   if (document.body.classList.contains("dark-mode"))
   {
     window.localStorage.setItem("mode", "dark");
-    document.getElementById("toggle-mode").name = LIGHT_MODE_ICON;
+    modeButton.name = LIGHT_MODE_ICON;
+    modeButton.title = LIGHT_MODE_TEXT;
   }
   else
   {
     window.localStorage.setItem("mode", "light");
-    document.getElementById("toggle-mode").name = DARK_MODE_ICON;
+    modeButton.name = DARK_MODE_ICON;
+    modeButton.title = DARK_MODE_TEXT;
   }
 }
 
