@@ -1,6 +1,23 @@
+function getPreferredMode()
+{
+  if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  )
+    return "dark";
+  else
+    return "light";
+}
+
 function setMode()
 {
   var mode = window.localStorage.getItem("mode");
+  if (!mode)
+  {
+    mode = getPreferredMode();
+    window.localStorage.setItem("mode", mode);
+  }
+
   if (mode != "dark")
     return;
 
