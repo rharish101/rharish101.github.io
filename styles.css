@@ -37,6 +37,10 @@ a
 }
 a:hover { text-decoration: underline; }
 
+/* Remove fixed icon titles at the cost of no mouse interactions
+ * Issues #838, #915 at: https://github.com/ionic-team/ionicons */
+ion-icon { pointer-events: none; }
+
 .button
 {
   background-color: var(--button-color);
@@ -92,7 +96,7 @@ body /* Default colors: Light-mode */
   --button-color: #555;
 }
 
-#toggle-mode
+#mode-btn
 {
   --size: 2rem;
   --pad: 0.3rem;
@@ -106,6 +110,13 @@ body /* Default colors: Light-mode */
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#mode-icon
+{
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
 }
 
 /*
