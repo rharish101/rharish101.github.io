@@ -28,10 +28,7 @@ function initMode()
 {
   var mode = window.localStorage.getItem("mode");
   if (!mode)
-  {
     mode = getPreferredMode();
-    window.localStorage.setItem("mode", mode);
-  }
 
   if (mode != "dark")
   {
