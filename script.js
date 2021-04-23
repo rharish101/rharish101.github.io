@@ -10,6 +10,9 @@ const DARK_MODE_ICON = "moon"; // shown in light mode
 const LIGHT_MODE_TEXT = "Switch to light mode"; // shown in dark mode
 const DARK_MODE_TEXT = "Switch to dark mode"; // shown in light mode
 
+// Transition duration for the background
+const TRANSITION = "0.1s";
+
 function getPreferredMode()
 {
   if (
@@ -38,10 +41,10 @@ function initMode()
 
   // Disable transitions temporarily, as they lead to a white flash
   document.body.style.transitionDuration = "0s";
-  toggleMode()
+  toggleMode();
   setTimeout(
     function () {
-      document.body.style.transitionDuration = "0.1s";
+      document.body.style.transitionDuration = TRANSITION;
     }, 100
   );
 }
