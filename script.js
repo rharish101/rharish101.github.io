@@ -54,17 +54,23 @@ function toggleMode()
 
   if (document.body.classList.contains("dark-mode"))
   {
-    window.localStorage.setItem("mode", "dark");
     modeIcon.name = LIGHT_MODE_ICON;
     modeButton.title = LIGHT_MODE_TEXT;
+    return "dark";
   }
   else
   {
-    window.localStorage.setItem("mode", "light");
     modeIcon.name = DARK_MODE_ICON;
     modeButton.title = DARK_MODE_TEXT;
+    return "light";
   }
 }
 
+function toggleAndSetMode()
+{
+  var newMode = toggleMode();
+  window.localStorage.setItem("mode", newMode);
+}
+
 initMode();
-document.getElementById(MODE_BTN_ID).onclick = toggleMode;
+document.getElementById(MODE_BTN_ID).onclick = toggleAndSetMode;
