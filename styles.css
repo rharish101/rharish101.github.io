@@ -41,15 +41,18 @@ a:hover { text-decoration: underline; }
  * Issues #838, #915 at: https://github.com/ionic-team/ionicons */
 ion-icon { pointer-events: none; }
 
-.button
+button
 {
   background-color: var(--button-color);
   box-shadow: 0 0 0.3rem var(--shadow-color);
-  display: block;
-}
-.button:hover { filter: brightness(150%); }
 
-.section
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover { filter: brightness(150%); }
+
+section,header
 {
   width: 100%;
   margin: 1rem 0;
@@ -98,14 +101,13 @@ body /* Default colors: Light-mode */
 
 #mode-btn
 {
-  --size: 2rem;
-  --pad: 0.3rem;
+  --size: 3rem;
 
   width: var(--size);
   height: var(--size);
-  padding: var(--pad);
   margin: calc(var(--size) / 2);
-  border-radius: calc(var(--size) / 2 + var(--pad));
+  border-style: none;
+  border-radius: calc(var(--size) / 2);
 
   position: absolute;
   top: 0;
@@ -117,6 +119,7 @@ body /* Default colors: Light-mode */
   --size: 2rem;
   width: var(--size);
   height: var(--size);
+  color: var(--text-color);
 }
 
 /*
