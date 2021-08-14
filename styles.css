@@ -91,12 +91,12 @@ body /* Default colors: Light-mode */
 
 .dark-mode
 {
-  --text-color: #aaa;
-  --bg-color: #333;
+  --text-color: #999;
+  --bg-color: #222;
   --heading-color: #ddd;
   --link-color: #82b1ff;
   --shadow-color: #000;
-  --button-color: #555;
+  --button-color: #444;
 }
 
 #mode-btn
