@@ -112,6 +112,10 @@ body /* Default colors: Light-mode */
   position: absolute;
   top: 0;
   left: 0;
+
+  /* Hide mode button by default, and make it visible with JS.
+   * Thus, if JS is disabled, no mode button is seen. */
+  display: none;
 }
 
 #mode-icon

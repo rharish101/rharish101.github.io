@@ -26,6 +26,10 @@ function getPreferredMode()
 
 function initMode()
 {
+  // Make the mode button visible, as `display` is set to `hidden`
+  var modeButton = document.getElementById(MODE_BTN_ID);
+  modeButton.style.display = "block";
+
   var mode = window.localStorage.getItem("mode");
   if (!mode)
     mode = getPreferredMode();
