@@ -66,7 +66,7 @@ section,header
 {
   width: 50%;
   max-width: 45vh;
-  height: 0.1rem;
+  height: 0.15rem;
   margin: 1rem 0;
 
   background-color: var(--text-color);
@@ -116,9 +116,7 @@ body /* Default colors: Light-mode */
 
 #mode-icon
 {
-  --size: 2rem;
-  width: var(--size);
-  height: var(--size);
+  font-size: 1.8rem;
   color: var(--text-color);
 }
 
@@ -172,15 +170,15 @@ Top Info
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0.4rem;
 }
-#social-bar ion-icon
+#social-bar i
 {
-  --size: 1.8rem;
-  width: var(--size);
-  height: var(--size);
-  margin: calc(var(--size) / 4);
+  --size: 1.6rem;
+  font-size: var(--size);
+  margin: calc(var(--size) / 3);
 }
-#social-bar ion-icon:hover { filter: brightness(150%); }
+#social-bar i:hover { filter: brightness(150%); }
 
 #resume { font-size: 1.2rem; }
 

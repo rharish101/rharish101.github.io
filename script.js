@@ -3,8 +3,8 @@ const MODE_BTN_ID = "mode-btn";
 const MODE_ICON_ID = "mode-icon";
 
 // Icon for light/dark mode switching
-const LIGHT_MODE_ICON = "sunny"; // shown in dark mode
-const DARK_MODE_ICON = "moon"; // shown in light mode
+const LIGHT_MODE_ICON = "bi-sun-fill"; // shown in dark mode
+const DARK_MODE_ICON = "bi-moon-fill"; // shown in light mode
 
 // Text shown on hovering
 const LIGHT_MODE_TEXT = "Switch to light mode"; // shown in dark mode
@@ -32,7 +32,7 @@ function initMode()
 
   if (mode != "dark")
   {
-    document.getElementById(MODE_ICON_ID).name = DARK_MODE_ICON;
+    document.getElementById(MODE_ICON_ID).classList = DARK_MODE_ICON;
     return;
   }
 
@@ -54,13 +54,13 @@ function toggleMode()
 
   if (document.body.classList.contains("dark-mode"))
   {
-    modeIcon.name = LIGHT_MODE_ICON;
+    modeIcon.classList = LIGHT_MODE_ICON;
     modeButton.title = LIGHT_MODE_TEXT;
     return "dark";
   }
   else
   {
-    modeIcon.name = DARK_MODE_ICON;
+    modeIcon.classList = DARK_MODE_ICON;
     modeButton.title = DARK_MODE_TEXT;
     return "light";
   }
