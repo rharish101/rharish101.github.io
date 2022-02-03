@@ -45,6 +45,7 @@ function initMode()
 
   if (mode != DARK_MODE_VAL)
   {
+    document.getElementById(MODE_BTN_ID).title = MODE_TEXT.get(preferredMode);
     document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(preferredMode);
     return;
   }
