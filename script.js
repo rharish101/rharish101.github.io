@@ -13,8 +13,10 @@ const DARK_MODE_TEXT = "Switch to dark mode"; // shown in light mode
 // Transition duration for the background
 const TRANSITION = "0.1s";
 
-// Boolean root node attribute for dark mode
-const DARK_MODE_ATTR = "data-theme-dark";
+// Root node attribute for the mode/theme and its values
+const MODE_ATTR = "data-theme";
+const LIGHT_MODE_VAL = "light";
+const DARK_MODE_VAL = "dark";
 
 function getPreferredMode()
 {
@@ -22,9 +24,9 @@ function getPreferredMode()
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
-    return "dark";
+    return DARK_MODE_VAL;
   else
-    return "light";
+    return LIGHT_MODE_VAL;
 }
 
 function initMode()
@@ -37,7 +39,7 @@ function initMode()
   if (!mode)
     mode = getPreferredMode();
 
-  if (mode != "dark")
+  if (mode != DARK_MODE_VAL)
   {
     document.getElementById(MODE_ICON_ID).classList = DARK_MODE_ICON;
     return;
@@ -55,21 +57,24 @@ function initMode()
 
 function toggleMode()
 {
-  document.documentElement.toggleAttribute(DARK_MODE_ATTR);
+  var rootNode = document.documentElement;
   var modeButton = document.getElementById(MODE_BTN_ID);
   var modeIcon = document.getElementById(MODE_ICON_ID);
 
-  if (document.documentElement.hasAttribute(DARK_MODE_ATTR))
+  switch (document.documentElement.getAttribute(MODE_ATTR))
   {
-    modeIcon.classList = LIGHT_MODE_ICON;
-    modeButton.title = LIGHT_MODE_TEXT;
-    return "dark";
-  }
-  else
-  {
-    modeIcon.classList = DARK_MODE_ICON;
-    modeButton.title = DARK_MODE_TEXT;
-    return "light";
+    case DARK_MODE_VAL:
+      rootNode.setAttribute(MODE_ATTR, LIGHT_MODE_VAL);
+      modeIcon.classList = DARK_MODE_ICON;
+      modeButton.title = DARK_MODE_TEXT;
+      return LIGHT_MODE_VAL;
+
+    case LIGHT_MODE_VAL:
+    default:
+      rootNode.setAttribute(MODE_ATTR, DARK_MODE_VAL);
+      modeIcon.classList = LIGHT_MODE_ICON;
+      modeButton.title = LIGHT_MODE_TEXT;
+      return DARK_MODE_VAL;
   }
 }
 

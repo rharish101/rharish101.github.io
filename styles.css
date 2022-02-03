@@ -76,7 +76,7 @@ Color Schemes
 ==================================================
 */
 
-:root /* Default colors: Light-mode */
+:root, :root[data-theme="light"] /* Default colors: Light-mode */
 {
   --text-color: #555;
   --bg-color: #eee;
@@ -86,7 +86,7 @@ Color Schemes
   --button-color: #fff;
 }
 
-:root[data-theme-dark]
+:root[data-theme="dark"]
 {
   --text-color: #999;
   --bg-color: #222;
