@@ -9,14 +9,14 @@ const DARK_MODE_VAL = "dark";
 
 // Icon for light/dark mode switching
 const MODE_ICON = new Map([
-  [LIGHT_MODE_VAL, "bi-sun-fill"], // shown in dark mode
-  [DARK_MODE_VAL, "bi-moon-fill"], // shown in light mode
+  [DARK_MODE_VAL, "bi-sun-fill"], // shown in dark mode
+  [LIGHT_MODE_VAL, "bi-moon-fill"], // shown in light mode
 ]);
 
 // Text shown on hovering
 const MODE_TEXT = new Map([
-  [LIGHT_MODE_VAL, "Switch to light mode"], // shown in dark mode
-  [DARK_MODE_VAL, "Switch to dark mode"], // shown in light mode
+  [DARK_MODE_VAL, "Switch to light mode"], // shown in dark mode
+  [LIGHT_MODE_VAL, "Switch to dark mode"], // shown in light mode
 ]);
 
 // Transition duration for the background
