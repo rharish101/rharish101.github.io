@@ -12,8 +12,9 @@ html
 
   font-family: Helvetica, Arial, sans-serif;
   font-size: 2vmin;
+
+  @media screen and (min-resolution: 192dpi) { font-size: 4vmin; }
 }
-@media screen and (min-resolution: 192dpi) { html { font-size: 4vmin; } }
 
 body
 {
