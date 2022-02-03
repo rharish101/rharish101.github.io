@@ -100,13 +100,13 @@ section, header
 
 #mode-btn
 {
-  --size: 3rem;
+  $size: 3rem;
 
-  width: var(--size);
-  height: var(--size);
-  margin: calc(var(--size) / 2);
+  width: $size;
+  height: $size;
+  margin: $size / 2;
   border-style: none;
-  border-radius: calc(var(--size) / 2);
+  border-radius: $size / 2;
 
   position: absolute;
   top: 0;
@@ -128,18 +128,18 @@ section, header
 
 #profile-pic
 {
-  --size: 6rem;
-  --border: calc(var(--size) / 20);
+  $size: 6rem;
+  $border: $size / 20;
 
-  width: var(--size);
-  height: var(--size);
-  margin: calc(var(--size) / 5);
-  margin-top: calc(var(--size) / 3);
+  width: $size;
+  height: $size;
+  margin: $size / 5;
+  margin-top: $size / 3;
   display: block;
 
-  border: var(--border) solid var(--button-color);
-  border-radius: calc(var(--size) + var(--border));
-  box-shadow: 0 0 calc(var(--border) * 2) var(--shadow-color);
+  border: $border solid var(--button-color);
+  border-radius: $size + $border;
+  box-shadow: 0 0 $border*2 var(--shadow-color);
 }
 
 #name
@@ -174,9 +174,9 @@ section, header
 
   i
   {
-    --size: 1.6rem;
-    font-size: var(--size);
-    margin: calc(var(--size) / 3);
+    $size: 1.6rem;
+    font-size: $size;
+    margin: $size / 3;
   }
   i:hover { filter: brightness(150%); }
 }
