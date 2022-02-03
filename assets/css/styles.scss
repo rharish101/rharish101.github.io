@@ -1,8 +1,9 @@
-/*
-==================================================
-General
-==================================================
-*/
+---
+---
+
+// ==================================================
+// General
+// ==================================================
 
 html
 {
@@ -12,7 +13,6 @@ html
   font-family: Helvetica, Arial, sans-serif;
   font-size: 2vmin;
 }
-
 @media screen and (min-resolution: 192dpi) { html { font-size: 4vmin; } }
 
 body
@@ -37,7 +37,6 @@ a
 }
 a:hover { text-decoration: underline; }
 
-
 button
 {
   background-color: var(--button-color);
@@ -49,7 +48,7 @@ button
 }
 button:hover { filter: brightness(150%); }
 
-section,header
+section, header
 {
   width: 100%;
   margin: 1rem 0;
@@ -70,13 +69,11 @@ section,header
   border-width: 0;
 }
 
-/*
-==================================================
-Color Schemes
-==================================================
-*/
+// ==================================================
+// Color Schemes
+// ==================================================
 
-:root, :root[data-theme="light"] /* Default colors: Light-mode */
+@mixin light-mode
 {
   --text-color: #555;
   --bg-color: #eee;
@@ -86,7 +83,7 @@ Color Schemes
   --button-color: #fff;
 }
 
-:root[data-theme="dark"]
+@mixin dark-mode
 {
   --text-color: #999;
   --bg-color: #222;
@@ -95,6 +92,11 @@ Color Schemes
   --shadow-color: #000;
   --button-color: #444;
 }
+
+// Default light mode
+:root, :root[data-theme="light"] { @include light-mode; }
+:root[data-theme="dark"] { @include dark-mode; }
+@media (prefers-color-scheme: dark) { :root { @include dark-mode; } }
 
 #mode-btn
 {
@@ -110,22 +112,19 @@ Color Schemes
   top: 0;
   left: 0;
 
-  /* Hide mode button by default, and make it visible with JS.
-   * Thus, if JS is disabled, no mode button is seen. */
+  // Hide mode button by default, and make it visible with JS.
+  // Thus, if JS is disabled, no mode button is seen.
   display: none;
 }
-
 #mode-icon
 {
   font-size: 1.8rem;
   color: var(--text-color);
 }
 
-/*
-==================================================
-Top Info
-==================================================
-*/
+// ==================================================
+// Top Info
+// ==================================================
 
 #profile-pic
 {
@@ -146,7 +145,7 @@ Top Info
 #name
 {
   width: 100%;
-  /* 0 margin at top to avoid whitespace b/w this and section start */
+  // 0 margin at top to avoid whitespace b/w this and section start
   margin: 0 auto 0.1rem;
   padding: 0;
   color: var(--heading-color);
@@ -172,27 +171,26 @@ Top Info
   justify-content: space-evenly;
   align-items: center;
   margin: 0.4rem;
+
+  i
+  {
+    --size: 1.6rem;
+    font-size: var(--size);
+    margin: calc(var(--size) / 3);
+  }
+  i:hover { filter: brightness(150%); }
 }
-#social-bar i
-{
-  --size: 1.6rem;
-  font-size: var(--size);
-  margin: calc(var(--size) / 3);
-}
-#social-bar i:hover { filter: brightness(150%); }
 
 #resume { font-size: 1.2rem; }
 
-/*
-==================================================
-Content
-==================================================
-*/
+// ==================================================
+// Content
+// ==================================================
 
-.section-title
+section > .section-title
 {
   width: 100%;
-  /* 0 margin at top to avoid whitespace b/w this and section start */
+  // 0 margin at top to avoid whitespace b/w this and section start
   margin: 0 auto 0.2rem;
   padding: 0;
   color: var(--heading-color);
@@ -203,9 +201,9 @@ Content
 
 p
 {
-  width: 100%;  /* helps in left-aligning text when inside a .section */
+  width: 100%;  // helps in left-aligning text when inside a .section
   max-width: 90vh;
-  /* 0 margin at bottom to avoid whitespace causing unnecessary scroll */
+  // 0 margin at bottom to avoid whitespace causing unnecessary scroll
   margin: 1rem auto 0;
 
   text-align: justify;

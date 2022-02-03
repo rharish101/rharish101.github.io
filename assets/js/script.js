@@ -40,10 +40,9 @@ function initMode()
   modeButton.style.display = "block";
 
   var mode = window.localStorage.getItem("mode");
-  if (!mode)
-    mode = getPreferredMode();
-
-  if (mode != DARK_MODE_VAL)
+  var preferredMode = getPreferredMode();
+  // SASS sets the default styling to the browser preferred mode
+  if (!mode || mode == preferredMode)
   {
     document.getElementById(MODE_BTN_ID).title = MODE_TEXT.get(preferredMode);
     document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(preferredMode);
@@ -66,15 +65,18 @@ function toggleMode()
   var modeButton = document.getElementById(MODE_BTN_ID);
   var modeIcon = document.getElementById(MODE_ICON_ID);
 
+  var currMode = document.documentElement.getAttribute(MODE_ATTR);
+  if (!currMode)
+    currMode = getPreferredMode();
+
   var newMode;
-  switch (document.documentElement.getAttribute(MODE_ATTR))
+  switch (currMode)
   {
     case DARK_MODE_VAL:
       newMode = LIGHT_MODE_VAL;
       break;
 
     case LIGHT_MODE_VAL:
-    default:
       newMode = DARK_MODE_VAL;
       break;
   }
