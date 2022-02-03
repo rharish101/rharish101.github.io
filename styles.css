@@ -37,9 +37,6 @@ a
 }
 a:hover { text-decoration: underline; }
 
-/* Remove fixed icon titles at the cost of no mouse interactions
- * Issues #838, #915 at: https://github.com/ionic-team/ionicons */
-ion-icon { pointer-events: none; }
 
 button
 {
