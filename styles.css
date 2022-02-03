@@ -76,7 +76,7 @@ Color Schemes
 ==================================================
 */
 
-body /* Default colors: Light-mode */
+:root /* Default colors: Light-mode */
 {
   --text-color: #555;
   --bg-color: #eee;
@@ -86,7 +86,7 @@ body /* Default colors: Light-mode */
   --button-color: #fff;
 }
 
-.dark-mode
+:root[data-theme-dark]
 {
   --text-color: #999;
   --bg-color: #222;

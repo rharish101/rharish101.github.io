@@ -13,6 +13,9 @@ const DARK_MODE_TEXT = "Switch to dark mode"; // shown in light mode
 // Transition duration for the background
 const TRANSITION = "0.1s";
 
+// Boolean root node attribute for dark mode
+const DARK_MODE_ATTR = "data-theme-dark";
+
 function getPreferredMode()
 {
   if (
@@ -52,11 +55,11 @@ function initMode()
 
 function toggleMode()
 {
-  document.body.classList.toggle("dark-mode");
+  document.documentElement.toggleAttribute(DARK_MODE_ATTR);
   var modeButton = document.getElementById(MODE_BTN_ID);
   var modeIcon = document.getElementById(MODE_ICON_ID);
 
-  if (document.body.classList.contains("dark-mode"))
+  if (document.documentElement.hasAttribute(DARK_MODE_ATTR))
   {
     modeIcon.classList = LIGHT_MODE_ICON;
     modeButton.title = LIGHT_MODE_TEXT;
