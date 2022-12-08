@@ -35,21 +35,20 @@ function initMode()
   var modeButton = document.getElementById(MODE_BTN_ID);
   modeButton.style.display = "block";
 
+  // Set the appropriate mode icon
   var mode = window.localStorage.getItem("mode") || DEFAULT_MODE_VAL;
+  document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(mode);
+
   var preferredMode = getPreferredMode();
   // SASS sets the default styling to the browser preferred mode
   if (mode == DEFAULT_MODE_VAL || mode == preferredMode)
-  {
-    document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(mode);
     return;
-  }
 
   // Disable transitions temporarily, as they lead to a white flash
   document.body.style.transitionDuration = "0s";
 
   // Set the mode manually
   document.documentElement.setAttribute(MODE_ATTR, mode);
-  document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(mode);
 
   // Re-enable transitions
   setTimeout(
@@ -62,34 +61,32 @@ function initMode()
 function toggleMode()
 {
   var rootNode = document.documentElement;
-  var modeIcon = document.getElementById(MODE_ICON_ID);
-  var currMode = document.documentElement.getAttribute(MODE_ATTR) || DEFAULT_MODE_VAL;
+  var currMode = rootNode.getAttribute(MODE_ATTR) || DEFAULT_MODE_VAL;
 
   var newMode;
   switch (currMode)
   {
-    case DARK_MODE_VAL:
-      newMode = DEFAULT_MODE_VAL;
+    case DEFAULT_MODE_VAL:
+      newMode = LIGHT_MODE_VAL;
       break;
 
     case LIGHT_MODE_VAL:
       newMode = DARK_MODE_VAL;
       break;
 
-    case DEFAULT_MODE_VAL:
-      newMode = LIGHT_MODE_VAL;
+    case DARK_MODE_VAL:
+      newMode = DEFAULT_MODE_VAL;
       break;
   }
 
   rootNode.setAttribute(MODE_ATTR, newMode);
-  modeIcon.classList = MODE_ICON.get(newMode);
+  document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(newMode);
   return newMode;
 }
 
 function toggleAndSetMode()
 {
-  var newMode = toggleMode();
-  window.localStorage.setItem("mode", newMode);
+  window.localStorage.setItem("mode", toggleMode());
 }
 
 initMode();
