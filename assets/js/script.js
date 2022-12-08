@@ -46,7 +46,12 @@ function initMode()
 
   // Disable transitions temporarily, as they lead to a white flash
   document.body.style.transitionDuration = "0s";
-  toggleMode();
+
+  // Set the mode manually
+  document.documentElement.setAttribute(MODE_ATTR, mode);
+  document.getElementById(MODE_ICON_ID).classList = MODE_ICON.get(mode);
+
+  // Re-enable transitions
   setTimeout(
     function () {
       document.body.style.transitionDuration = TRANSITION;
