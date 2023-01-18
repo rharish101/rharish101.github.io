@@ -64,6 +64,10 @@ section, header {
   border-width: 0;
 }
 
+ul {
+  margin: 0px auto;
+}
+
 // ==================================================
 // Color Schemes
 // ==================================================
@@ -192,4 +196,11 @@ p {
 
   text-align: justify;
   text-indent: 1.25rem;
+}
+
+li > .list-heading {
+  color: var(--heading-color);
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0.3rem;
 }
