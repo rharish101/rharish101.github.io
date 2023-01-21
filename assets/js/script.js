@@ -82,18 +82,21 @@ function toggleMode()
   var rootNode = document.documentElement;
   var currMode = rootNode.getAttribute(MODE_ATTR) || DEFAULT_MODE_VAL;
 
+  var preferredMode = getPreferredMode();
+  var oppositeMode = (preferredMode == LIGHT_MODE_VAL) ? DARK_MODE_VAL : LIGHT_MODE_VAL;
+
   var newMode;
   switch (currMode)
   {
     case DEFAULT_MODE_VAL:
-      newMode = LIGHT_MODE_VAL;
+      newMode = oppositeMode;
       break;
 
-    case LIGHT_MODE_VAL:
-      newMode = DARK_MODE_VAL;
+    case oppositeMode:
+      newMode = preferredMode;
       break;
 
-    case DARK_MODE_VAL:
+    case preferredMode:
       newMode = DEFAULT_MODE_VAL;
       break;
   }
