@@ -1,3 +1,3 @@
-# My Website
+# My Personal Homepage
 
-This is the source code for my personal website, hosted using GitHub Pages.
+This is the source code for my personal homepage, hosted using GitHub Pages.
