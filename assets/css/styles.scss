@@ -81,7 +81,7 @@ section {
 }
 section > * {
   margin: 0;
-  max-width: 90vh;
+  max-width: 800px;
   width: 80%;
 }
 section:nth-of-type(odd) { background: var(--bg-color-alt); }
