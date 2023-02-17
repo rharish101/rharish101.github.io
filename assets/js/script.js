@@ -1,4 +1,3 @@
-// Copyright (C) 2020  Harish Rajagopal <harish.rajagopals@gmail.com>
 // SPDX-FileCopyrightText: 2020 Harish Rajagopal <harish.rajagopals@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
