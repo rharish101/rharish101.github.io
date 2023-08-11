@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <!--
 SPDX-FileCopyrightText: 2020 Harish Rajagopal <harish.rajagopals@gmail.com>
@@ -7,83 +7,131 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 <html lang="en" prefix="og: http://ogp.me/ns#">
-<head>
-  <title>Harish's Homepage</title>
-  <meta name="description" content="Personal homepage of Harish Rajagopal">
-  <meta name="keywords" content="personal homepage, personal website">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="96x96">
-  <meta property="og:title" content="Harish's Homepage">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://rharish101.github.io/assets/images/profile-pic.jpg">
-  <meta property="og:url" content="https://rharish101.github.io">
-  <meta property="og:description" content="Personal homepage of Harish Rajagopal">
-  <script type="text/javascript" src="assets/js/script.js" async></script>
-</head>
+  <head>
+    <title>Harish's Homepage</title>
+    <meta name="description" content="Personal homepage of Harish Rajagopal" />
+    <meta name="keywords" content="personal homepage, personal website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/favicon.png"
+      sizes="96x96"
+    />
+    <meta property="og:title" content="Harish's Homepage" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://rharish101.github.io/assets/images/profile-pic.jpg"
+    />
+    <meta property="og:url" content="https://rharish101.github.io" />
+    <meta
+      property="og:description"
+      content="Personal homepage of Harish Rajagopal"
+    />
+    <script type="text/javascript" src="assets/js/script.js" async></script>
+  </head>
 
-<body>
+  <body>
+    <button
+      id="mode-btn"
+      aria-label="Theme button"
+      title="Switch light/dark mode"
+    >
+      <i id="mode-icon"></i>
+    </button>
 
-<button id="mode-btn" aria-label="Theme button" title="Switch light/dark mode">
-  <i id="mode-icon"></i>
-</button>
+    <main>
+      <img
+        id="profile-pic"
+        alt="profile-picture"
+        src="assets/images/profile-pic.jpg"
+      />
 
-<main>
-  <img id="profile-pic" alt="profile-picture" src="assets/images/profile-pic.jpg">
+      <header>
+        <h1 id="name">Harish Rajagopal</h1>
+        <h2 id="short-desc">MSc CS, ETH Zürich</h2>
+        <nav id="social-bar">
+          <a
+            href="https://github.com/rharish101/"
+            title="GitHub link"
+            aria-label="GitHub link"
+          >
+            <i class="bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rharish101/"
+            title="LinkedIn link"
+            aria-label="LinkedIn link"
+          >
+            <i class="bi-linkedin"></i>
+          </a>
+          <a
+            href="mailto:Harish Rajagopal <harish.rajagopals@gmail.com>"
+            title="Email link"
+            aria-label="Email link"
+          >
+            <i class="bi-envelope-fill"></i>
+          </a>
+        </nav>
+        <a
+          id="resume"
+          href="https://github.com/rharish101/resume/releases/latest/download/resume.pdf"
+          >Resume</a
+        >
+      </header>
 
-  <header>
-    <h1 id="name">Harish Rajagopal</h1>
-    <h2 id="short-desc">MSc CS, ETH Zürich</h2>
-    <nav id="social-bar">
-      <a href="https://github.com/rharish101/" title="GitHub link" aria-label="GitHub link">
-        <i class="bi-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/rharish101/" title="LinkedIn link" aria-label="LinkedIn link">
-        <i class="bi-linkedin"></i>
-      </a>
-      <a href="mailto:Harish Rajagopal <harish.rajagopals@gmail.com>" title="Email link" aria-label="Email link">
-        <i class="bi-envelope-fill"></i>
-      </a>
-    </nav>
-    <a id="resume" href="https://github.com/rharish101/resume/releases/latest/download/resume.pdf">Resume</a>
-  </header>
+      <section>
+        <h3 class="section-title">About Me</h3>
 
-  <section>
-    <h3 class="section-title">About Me</h3>
+        <p>
+          I'm a programmer and machine learning enthusiast with a passion for
+          deep learning, computer vision, and optimization. Outside the digital
+          realm, I'm a metalhead who enjoys working out, playing video games,
+          and strumming the electric guitar. I also find solace in the pages of
+          novels and contribute to open-source projects whenever I can. Welcome
+          to my world.
+        </p>
+      </section>
 
-    <p>
-    I'm a programmer and machine learning enthusiast with a passion for deep learning, computer vision, and optimization.
-    Outside the digital realm, I'm a metalhead who enjoys working out, playing video games, and strumming the electric guitar.
-    I also find solace in the pages of novels and contribute to open-source projects whenever I can.
-    Welcome to my world.
-    </p>
-  </section>
+      <section>
+        <h3 class="section-title">Education</h3>
 
-  <section>
-    <h3 class="section-title">Education</h3>
+        <ul>
+          <li>
+            <h4 class="list-heading">ETH Zürich</h4>
+            Masters: Computer Science<br />
+            Specialization: Machine Intelligence<br />
+            Sep 2020 – Oct 2022
+          </li>
 
-    <ul>
-      <li><h4 class="list-heading">ETH Zürich</h4>
-        Masters: Computer Science<br>
-        Specialization: Machine Intelligence<br>
-        Sep 2020 – Oct 2022
-      </li>
+          <li>
+            <h4 class="list-heading">IIT Kanpur</h4>
+            Bachelors: Computer Science and Engineering<br />
+            Aug 2016 – Jun 2020
+          </li>
+        </ul>
+      </section>
+    </main>
 
-      <li><h4 class="list-heading">IIT Kanpur</h4>
-        Bachelors: Computer Science and Engineering<br>
-        Aug 2016 – Jun 2020
-      </li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <a href="https://github.com/rharish101/rharish101.github.io#licenses" target="_blank">© 2020 Harish Rajagopal</a>
-  <div class="footer-sep">·</div>
-  <a href="https://github.com/rharish101/rharish101.github.io" target="_blank">Source Code</a>
-</footer>
-
-</body>
+    <footer>
+      <a
+        href="https://github.com/rharish101/rharish101.github.io#licenses"
+        target="_blank"
+        >© 2020 Harish Rajagopal</a
+      >
+      <div class="footer-sep">·</div>
+      <a
+        href="https://github.com/rharish101/rharish101.github.io"
+        target="_blank"
+        >Source Code</a
+      >
+    </footer>
+  </body>
 </html>

@@ -22,19 +22,16 @@ const MODE_ICON = new Map([
 // Transition duration for the background
 const TRANSITION = "0.1s";
 
-function getPreferredMode()
-{
+function getPreferredMode() {
   if (
     window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
+    window.matchMedia("(prefers-color-scheme: dark)").matches
   )
     return DARK_MODE_VAL;
-  else
-    return LIGHT_MODE_VAL;
+  else return LIGHT_MODE_VAL;
 }
 
-function initMode()
-{
+function initMode() {
   // Make the mode button visible, as `display` is set to `hidden`
   var modeButton = document.getElementById(MODE_BTN_ID);
   modeButton.style.display = "block";
@@ -45,8 +42,7 @@ function initMode()
 
   var preferredMode = getPreferredMode();
   // SASS sets the default styling to the browser preferred mode
-  if (mode == DEFAULT_MODE_VAL || mode == preferredMode)
-    return;
+  if (mode == DEFAULT_MODE_VAL || mode == preferredMode) return;
 
   // Disable transitions temporarily, as they lead to a white flash
   document.body.style.transitionDuration = "0s";
@@ -55,24 +51,21 @@ function initMode()
   document.documentElement.setAttribute(MODE_ATTR, mode);
 
   // Re-enable transitions
-  setTimeout(
-    function () {
-      document.body.style.transitionDuration = TRANSITION;
-    }, 100
-  );
+  setTimeout(function () {
+    document.body.style.transitionDuration = TRANSITION;
+  }, 100);
 }
 
-function toggleMode()
-{
+function toggleMode() {
   var rootNode = document.documentElement;
   var currMode = rootNode.getAttribute(MODE_ATTR) || DEFAULT_MODE_VAL;
 
   var preferredMode = getPreferredMode();
-  var oppositeMode = (preferredMode == LIGHT_MODE_VAL) ? DARK_MODE_VAL : LIGHT_MODE_VAL;
+  var oppositeMode =
+    preferredMode == LIGHT_MODE_VAL ? DARK_MODE_VAL : LIGHT_MODE_VAL;
 
   var newMode;
-  switch (currMode)
-  {
+  switch (currMode) {
     case DEFAULT_MODE_VAL:
       newMode = oppositeMode;
       break;
@@ -91,8 +84,7 @@ function toggleMode()
   return newMode;
 }
 
-function toggleAndSetMode()
-{
+function toggleAndSetMode() {
   window.localStorage.setItem("mode", toggleMode());
 }
 

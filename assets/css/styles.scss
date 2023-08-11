@@ -1,5 +1,6 @@
 ---
 ---
+
 // SPDX-FileCopyrightText: 2020 Harish Rajagopal <harish.rajagopals@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -39,8 +40,12 @@ a {
   text-decoration: none;
   color: var(--link-color);
 }
-footer a { color: var(--footer-text-color); }
-a:hover { text-decoration: underline; }
+footer a {
+  color: var(--footer-text-color);
+}
+a:hover {
+  text-decoration: underline;
+}
 
 button {
   background-color: var(--button-color);
@@ -50,9 +55,12 @@ button {
   justify-content: center;
   align-items: center;
 }
-button:hover { filter: brightness(150%); }
+button:hover {
+  filter: brightness(150%);
+}
 
-section, header {
+section,
+header {
   margin: 0;
   padding: 1.5rem 0;
   display: flex;
@@ -60,7 +68,9 @@ section, header {
   align-items: center;
 }
 
-header { gap: 0.2rem; }
+header {
+  gap: 0.2rem;
+}
 
 section {
   width: 100%;
@@ -71,7 +81,9 @@ section > * {
   max-width: 800px;
   width: 80%;
 }
-section:nth-of-type(odd) { background: var(--bg-color-alt); }
+section:nth-of-type(odd) {
+  background: var(--bg-color-alt);
+}
 
 footer {
   width: 100%;
@@ -127,9 +139,18 @@ ul {
 }
 
 // Default light mode
-:root, :root[data-theme="light"] { @include light-mode; }
-:root[data-theme="dark"] { @include dark-mode; }
-@media (prefers-color-scheme: dark) { :root { @include dark-mode; } }
+:root,
+:root[data-theme="light"] {
+  @include light-mode;
+}
+:root[data-theme="dark"] {
+  @include dark-mode;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-mode;
+  }
+}
 
 #mode-btn {
   $size: 3rem;
@@ -168,7 +189,7 @@ ul {
 
   border: $border solid var(--button-color);
   border-radius: $size + $border;
-  box-shadow: 0 0 $border*2 var(--shadow-color);
+  box-shadow: 0 0 $border * 2 var(--shadow-color);
 }
 
 #name {
@@ -201,10 +222,14 @@ ul {
     font-size: $size;
     margin: $size / 3;
   }
-  i:hover { filter: brightness(150%); }
+  i:hover {
+    filter: brightness(150%);
+  }
 }
 
-#resume { font-size: 1.2rem; }
+#resume {
+  font-size: 1.2rem;
+}
 
 // ==================================================
 // Content
