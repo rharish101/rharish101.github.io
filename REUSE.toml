@@ -1,0 +1,14 @@
+version = 1
+SPDX-PackageName = "Harish's Homepage"
+SPDX-PackageSupplier = "Harish Rajagopal <harish.rajagopals@gmail.com>"
+SPDX-PackageDownloadLocation = "https://github.com/rharish101/rharish101.github.io"
+
+[[annotations]]
+path = "assets/images/favicon.png"
+SPDX-FileCopyrightText = "2022 Fonticons, Inc. <https://fontawesome.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "assets/images/profile-pic.jpg"
+SPDX-FileCopyrightText = "2016 Bugatti Automobiles S.A.S. <https://www.bugatti.com>"
+SPDX-License-Identifier = "CC0-1.0"
