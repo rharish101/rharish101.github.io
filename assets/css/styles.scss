@@ -157,9 +157,9 @@ ul {
 
   width: $size;
   height: $size;
-  margin: $size / 2;
+  margin: calc($size / 2);
   border-style: none;
-  border-radius: $size / 2;
+  border-radius: calc($size / 2);
 
   position: absolute;
   top: 0;
@@ -180,11 +180,11 @@ ul {
 
 #profile-pic {
   $size: 6rem;
-  $border: $size / 20;
+  $border: calc($size / 20);
 
   width: $size;
   height: $size;
-  margin-top: $size / 3;
+  margin-top: calc($size / 3);
   display: block;
 
   border: $border solid var(--button-color);
@@ -220,7 +220,7 @@ ul {
   i {
     $size: 1.6rem;
     font-size: $size;
-    margin: $size / 3;
+    margin: calc($size / 3);
   }
   i:hover {
     filter: brightness(150%);
