@@ -30,16 +30,12 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Dart Sass
         uses: dw-labs-org/dart-sass-gha@v1
-      - name: Create directories
-        run: mkdir -p ./_site/assets/css
-      - name: Copy files
-        run: cp ./index.html ./robots.txt ./sitemap.xml ./_site
-      - name: Copy assets
-        run: cp -r ./assets/images ./assets/js ./_site/assets
       - name: Compile SCSS
-        run: sass ./assets/scss/:./_site/assets/css/
+        run: sass src/scss/:static/assets/css/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: static/
 
   # Deployment job
   deploy:
