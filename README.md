@@ -6,7 +6,7 @@ SPDX-License-Identifier: CC0-1.0
 
 # My Personal Homepage [Archived]
 
-This is the source code for an older version of my personal homepage, that used to be hosted using GitHub Pages. The source code for the current version is at <https://github.com/rharish101/homepage>, hosted at <https://rharish.dev/>.
+This is the source code for an older version of my personal homepage, that used to be hosted using GitHub Pages. The source code for the current version is at <https://github.com/rharish101/homepage>, hosted at <https://www.rharish.dev/>.
 
 The static parts are stored in the [static](./static) directory, while the rest are stored in the [src](./src) directory.
 I use a custom GitHub Actions workflow in [`.github/workflows/main.yml`](./.github/workflows/main.yml) to deploy the website instead of using the default Jekyll-based deployment that GitHub uses.
